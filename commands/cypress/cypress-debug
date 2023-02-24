@@ -1,0 +1,14 @@
+#!/bin/bash
+#ddev-generated
+## Description: Add debugging to a step
+## Reference - https://docs.cypress.io/guides/guides/command-line#Enable-Debug-Logs
+## Usage: cypress-debug [arguments]
+## Example: "ddev cypress-debug --browser chrome"
+## Customize per your needs
+## Mac or linux
+## DEBUG=cypress:* cypress run "$@"
+## Windows
+
+set DEBUG=cypress:*
+
+

@@ -4,5 +4,7 @@
 ##
 ## Usage: cypress-run [arguments]
 ## Example: "ddev cypress-run --browser chrome"
+## On Mac you may need to pass the baseUrl here
+## CYPRESS_baseUrl=https://test.ddev.site cypress run "$@"
 
 cypress run "$@"

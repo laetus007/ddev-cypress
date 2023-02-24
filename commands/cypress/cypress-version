@@ -1,0 +1,8 @@
+#!/bin/bash
+#ddev-generated
+## Description: Prints cypress versions
+##
+## Usage: cypress-version [arguments]
+## Example: "ddev cypress-version --component node"
+
+cypress version "$@"

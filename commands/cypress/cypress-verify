@@ -1,0 +1,8 @@
+#!/bin/bash
+#ddev-generated
+## Description: Verify that Cypress is installed correctly and is executable.
+## https://docs.cypress.io/guides/guides/command-line#cypress-verify
+## Usage: cypress-verify
+## Example: "ddev cypress-verify"
+
+cypress verify cypress run "$@"

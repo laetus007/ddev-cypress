@@ -5,5 +5,7 @@
 ##              https://docs.cypress.io/guides/guides/command-line#cypress-open
 ## Usage: cypress-open [arguments]
 ## Example: "ddev cypress-open --config cypress.json"
+## On Mac you may need to pass the baseUrl here
+## CYPRESS_baseUrl=https://test.ddev.site cypress open --project . "$@"
 
 cypress open --project . "$@"

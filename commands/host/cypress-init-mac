@@ -1,0 +1,12 @@
+#!/bin/bash
+# Mac requires X-server running - see notes
+# https://www.cypress.io/blog/2019/05/02/run-cypress-with-a-single-docker-command/
+# Requires Xquartz - https://sourabhbajaj.com/blog/2017/02/07/gui-applications-docker-mac/
+## Description: Init Cypress X-Server on start/restart.
+##
+##
+## Usage: cypress-init-mac
+## Example: "ddev cypress-init-mac"
+
+IP=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
+xhost + $IP

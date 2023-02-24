@@ -1,0 +1,8 @@
+#!/bin/bash
+#ddev-generated
+## Description: Prints information about Cypress and the current environment
+## https://docs.cypress.io/guides/guides/command-line#cypress-info
+## Usage: cypress-info
+## Example: "ddev cypress-info"
+
+cypress info
