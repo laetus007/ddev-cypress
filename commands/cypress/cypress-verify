@@ -5,4 +5,4 @@
 ## Usage: cypress-verify
 ## Example: "ddev cypress-verify"
 
-cypress verify cypress run "$@"
+cypress verify "$@"
