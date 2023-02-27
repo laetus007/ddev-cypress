@@ -134,10 +134,80 @@ Example: To run all Cypress tests, using Chrome in headless mode
 ddev cypress-run --browser chrome
 ```
 
+### `cypress-info`
+
+Prints information about Cypress and the current environment.
+
+```shell
+ddev cypress-info
+```
+
+### `cypress-verify`
+
+Verify that Cypress is installed correctly and is executable.
+
+```shell
+ddev cypress-verify
+```
+
+### `cypress-version`
+
+Prints the installed Cypress binary version, the Cypress package version, the version of Electron used to build Cypress, and the bundled Node version.
+
+```shell
+ddev cypress-version
+```
+
+This command also accepts a signal command to check either the package, binary, browser or node component versions. Refer to [#cypress verify](https://docs.cypress.io/guides/guides/command-line#cypress-version) for more information.
+
+Example: To print an individual component's version number
+
+```shell
+ddev cypress-version --component binary
+```
+
+### `ddev cypress-cache [command]`
+
+Commands for managing the global Cypress cache[#cypress cache](https://docs.cypress.io/guides/guides/command-line#cypress-cache-command) for more information.
+
+
+```shell
+ddev cypress-cache path
+```
+Print the path to the Cypress cache folder.
+
+```shell
+ddev cypress-cache list 
+```
+
+Print all existing installed versions of Cypress.
+
+```shell
+ddev cypress-cache clear 
+```
+Clear the contents of the Cypress cache.
+
+```shell
+ddev cypress-cache prune 
+```
+
+Delete all installed Cypress versions from the cache except for the currently-installed version.
+
+### Debugging commands
+
+Any of the ddev-generated commands are modifiable to print debug information when the command is run.  You can also customize `ddev cypress-debug` to run any of the cli commands with debut information set.  Please note that the commands 
+are different for Mac or Linux and Windows.
+
+Mac or Linux - `DEBUG=cypress:* cypress open`
+Windows
+`set DEBUG=cypress:*`
+`cypress open`
+
 ## Notes
 
 - The dockerized Cypress *should* find any locally installed plugins in your project's `node_modules`; assuming they are install via npm or yarn.
 - Some plugins may require additional settings, such as environmental variables. These can be passed through via command arguments.
+- If you have additional hostnames and want to connect to any of these, you will need to explicitly list each as an additional line in the `external links:` stanza of the docker-composer.cypress.yaml file. 
 
 ## Troubleshooting
 
